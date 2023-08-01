@@ -1,0 +1,27 @@
+<!DOCTYPE html> <!--Para comentarmos em HTML usamos esse syntaxe-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenando Nome</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script> //Para comentarmos em JavaScrpit usamos essa syntaxe
+    
+        let nome = prompt("Qual o seu nome?")
+        document.write(`Olá ${nome}, o seu nome possui ${nome.length} letras.<br>`) //A tag <br> serve para pular 1 linha
+        document.write(`O seu nome em letras maiúsculas fica assim: ${nome.toUpperCase()}<br>`)
+        document.write(`E o seu nome em letras minúsculas fica assim: ${nome.toLowerCase()}`)
+        //Os comandos toUpperCase() e toLowerCase(), servem respectivamente, para tranformar todas as letras de uma string em letras Maiúsculas e Minúsculas.
+    </script>
+</body>
+
+</html> <!--Para comentarmos em HTML usamos esse syntaxe-->

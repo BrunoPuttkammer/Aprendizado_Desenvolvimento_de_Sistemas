@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!--Para comentarmos em HTML usamos esse syntaxe-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenando Números</title>
+</head>
+
+<body>
+
+    <script> //Para comentarmos em JavaScrpit usamos essa syntaxe
+
+        let n1 = Number(prompt("Digite um número"))    //Ao invés de usar o comando "Number", podemos usar também ParseInt e ParseFloat,
+        let n2 = Number(prompt("Digite outro número")) //para especificar se queremos apenas números inteiros ou reais
+        let soma = n1 + n2
+        alert(`A soma entre os números ${n1} e ${n2}, resulta em: ${soma}`)
+
+        //Caso queira transformar um número (ex: "soma") em uma string, você pode utilizar o comando String
+        //Exemplo: String(soma) ou também soma.toString()
+
+        //Podemos também controlar quantas casas depois da virgúla aparecem em um número real, utilizando o comando toFixed()
+        //Exemplo: soma.toFixed(2 ou 3 ou o número de casas de sua escolha)
+
+        //Comando extra: soma.ToLocaleString('pt-BR', {style: currency, currency: BRL})
+        //este comando serve para converter números para moedas,seja ela real,dólar,euro e etc...
+    </script>
+</body>
+
+</html>
