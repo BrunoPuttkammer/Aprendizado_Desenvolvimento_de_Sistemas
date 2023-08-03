@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM e Seletores</title>
+    <style>
+        body {
+            font: normal 16pt arial;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="head1">VAZIO</h1>
+
+    <p class="paragrafo">O DOM (Document Object Model) é uma representação estruturada de um documento HTML ou XML em
+        forma de uma árvorehierárquica. Ele permite que os navegadores e outras tecnologias interajam com os elementos
+        da página de formaprogramática. Cada elemento da página é representado como um "nó" no DOM, com relacionamentos
+        pai-filho que refletem a estrutura do documento.</p>
+
+    <p class="paragrafo">Essa representação do documento permite que os desenvolvedores acessem, modifiquem e manipulem
+        dinamicamente os
+        elementos e conteúdos da página usando linguagens de programação, como JavaScript.</p>
+
+    <h2 name="head2">VAZIO</h2>
+
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210908120846/DOM.png" alt="imagem da árvore DOM">
+
+    <script>
+        /*Existem 5 tipos de seletores diferentes,são eles:
+          getElementsByTagName('')[]
+          getElementById('')
+          getElementsByName('')[]
+          getElementsByClassName('')[]
+          querySelector(tag + id ou class) Lembrando que ID é representando por "#", e Class é representado por "."
+
+          Exemplos á seguir:
+        */
+
+        let corpo = document.getElementsByTagName('body')[0]
+        let titulo = document.getElementById('head1')
+        let subtitulo = document.getElementsByName('head2')[0]
+        let texto = document.getElementsByClassName('paragrafo')[1]
+
+        corpo.style.background = 'lightgray'
+        titulo.innerText = 'O que é DOM?'
+        subtitulo.innerHTML = '<u>Árvore DOM</u>'
+        texto.style.background = 'white'
+
+    </script>
+</body>
+
+</html>
