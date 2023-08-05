@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora com Eventos DOM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(214, 212, 212);
+            font: normal 18pt arial;
+        }
+
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somador de Valores:</h1>
+
+    <input type="number" name="num1" id="txtn1" placeholder="Digite um número..."> +
+    <input type="number" name="num2" id="txtn2" placeholder="Digite outro número...">
+    <input type="button" value="SOMAR" onclick="somar()">
+
+    <p id="resultado"></p>
+
+    <script>
+        function somar() {
+            let input1 = document.getElementById('txtn1')
+            let input2 = document.getElementById('txtn2')
+            let resultado = document.getElementById('resultado')
+            let n1 = Number(input1.value)
+            let n2 = Number(input2.value)
+            let soma = n1 + n2
+            resultado.innerHTML = `A soma total entre ${n1} e ${n2}, equivale á <b>${soma}</b>`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos do DOM</title>
+    <style>
+        body {
+            background-color: rgb(46, 106, 46);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div#area {
+            font: bold 20pt arial;
+            background-color: rgb(135, 224, 135);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos DOM:</h1>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()">
+        <!--Podemos usar onClick,onMouseEnter e onMouseLeave que deixam o HTML um pouco poluído ou... podemos utilizar os EventListeners diretamente no JavaScript. -->
+        Clique aqui!
+    </div>
+
+    <script>
+        //Alguns exemplos de eventos são: mouseenter, mousemove, mouseup, mousedown, click e mouseout
+        let a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar) //Ao usar "addEventListener", não precisariamos ter os outros eventos na div do HTML
+        a.addEventListener('mouseleave', sair)
+
+        function clicar() {
+            a.innerText = "Parabéns!"
+            a.style.backgroundColor = "rgb(204, 101, 101)"
+        }
+
+        function entrar() {
+            a.innerText = "Quase lá"
+            a.style.backgroundColor = "rgb(211, 224, 135)"
+        }
+
+        function sair() {
+            a.innerText = "Tente de novo"
+            a.style.backgroundColor = "rgb(135, 224, 135)"
+        }
+    </script>
+</body>
+
+</html>
