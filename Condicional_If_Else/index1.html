@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição IF ELSE</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(197, 197, 197);
+            font: normal 18pt arial;
+        }
+
+        div#area {
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Carteira de Motorista</h1>
+        Quantos anos você tem? <input type="number" name="txtidade" id="txtidade" placeholder="Digite sua idade...">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </div>
+    <div id="resultado"></div>
+    <script>
+        function verificar() {
+            let txtidade = document.getElementById('txtidade')
+            let resultado = document.getElementById('resultado')
+            let idade = Number(txtidade.value)
+            if (idade >= 18) {
+                resultado.innerHTML = `<p>Você pode fazer a <b>carteira de motorista!</b></p>`
+            } else {
+                resultado.innerHTML = `<p>Você <b>não</b> pode fazer a carteira de motorista!</p>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
